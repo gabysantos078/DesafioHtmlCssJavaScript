@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio2</title>
+</head>
+<body>
+    <h1>Verificar idade.</h1>
+
+    <!--Criar um site que contenha um header com logomarca e título do site. 
+    Uma barra de navegação e uma footer. Cada uma das atividades abaixo deve ser implementadas 
+    em uma página html e acessada através de um link.-->
+
+    <label for="idade">Informe sua idade:</label>
+    <input type="number" id="idade">
+    <button id="validar">Validar idade</button>
+    <p id="resultado"></p>
+</body>
+</html>
+
+<!--inicializar o JavaScript-->
+<script>
+    //Obter elementos HTML
+    
+    const idadeInput = document.getElementById('idade');
+    const resultado = document.getElementById('resultado');
+    const botaoValidar = document.getElementById('validar');
+
+    //clique do botão
+
+    botaoValidar.addEventListener('click', function () {
+    
+    //coleta a idade informada pelo usuario
+    const idade = parseInt(idadeInput.value);
+
+    //validar se a idade é maior ou menor de idade
+        if (idade >= 18) {
+            resultado.textContent = 'Você é maior de idade.';
+        }else {
+            resultado.textContent = 'Você é menor de idade';
+        }
+    });
+
+</script>

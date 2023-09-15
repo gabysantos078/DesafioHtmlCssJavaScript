@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cáulo IMC</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
+    <script src="header.js"></script>
     <!--Faça um página para calcular o IMC.-->
 
     <h1>Informe abaixo seu peso e altura:</h1>
@@ -16,7 +17,7 @@
 
     <hr>
 
-    <label for="altura">IInforme sua altura:</label>
+    <label for="altura">Informe sua altura:</label>
     <input type="number" id="altura">
 
     <button onclick="calcIMC">IMC</button>
@@ -27,29 +28,27 @@
 
     <script>
         function calcIMC(){
-        var peso = document.getElementById('peso')
-        var altura = document.getElementById('altura')
-
-        const imc = peso / (altura*altura);
+        var peso = parseFloat(document.getElementById('peso').value);
+        var altura = parseFloat(document.getElementById('altura').value);
+        
+        var imc = peso / (altura * altura);
 
         if (imc < 17) {
-            document.getElementById = "Você está muito abaixo do peso";
+            document.getElementById('resultado') = "Você está muito abaixo do peso";
         } else if (imc >= 17 && imc <= 18.49) {
-            document.getElementById = "Você está abaixo do peso";
+            document.getElementById('resultado') = "Você está abaixo do peso";
         } else if (imc >= 18.5 && imc <= 24.99) {
-            document.getElementById = "Você está no peso normal";
+            document.getElementById('resultado') = "Você está no peso normal";
         } else if (imc >= 25 && imc <= 29.99) {
-            document.getElementById = "Você está acima do peso";
+            document.getElementById('resultado') = "Você está acima do peso";
         } else if (imc >= 30 && imc <= 34.99) {
-            document.getElementById = "Obesidade grau I";
+            document.getElementById('resultado') = "Obesidade grau I";
         } else if (imc >= 35  && imc <= 39.99) {
-            document.getElementById = "Obesidade grau II (Severa)";
+            document.getElementById('resultado') = "Obesidade grau II (Severa)";
         } else {
-            document.getElementById = "Obesidade grau III (Obesidade mórbida)";
-        }
-        
-            
-        }
+            document.getElementById('resultado') = "Obesidade grau III (Obesidade mórbida)";
+        }   
+    }
 
     </script>
     

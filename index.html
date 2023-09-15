@@ -3,66 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="assets/css/main.css">
-    <noscript><link rel="stylesheet" href="assets/css/noscript.css"></noscript>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" 
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Bem Vindo!</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-   <header>
-    <h1>
-        <span>Exercício 1</span>
-    </h1>
-
-    <!--colocar logomarca-->
-
-    </header>
-    <section id="sidebar">
-        <div class="inner">
-            <nav>
-                <ul>
-                    <li><a href="#intro" class="scrolly active">Bem vindo!</a></li>
-                    <li><a href="#exercicio2" class="scrolly">Segundo exercício</a></li>
-                    <li><a href="#exercicio3" class="scrolly">Terceiro exercício</a></li>
-                    <li><a href="#exercicio4" class="scrolly">Quarto exercício</a></li>
-                    <li><a href="#exercicio5" class="scrolly">Quinto exercício</a></li>
-                </ul>
-            </nav>
-        </div>
-    </section>
-
-    <div id="wrapper">
-        <section id="intro" class="wrapper style1 fullscreen fade-up">
-            <div class="inner">
-            <h1>Gabriely P. dos Santos</h1>
-            <p>"Este é um exercício proposto pelo instrutor Vilson Moro!"
-            <br>
-            "Destinado para o curso de JAVA do Entra21 edição 2023.
+    <script src="header.js"></script>
+    <main>
+        <section id="hero">
+            <h1>Bem vindo!</h1>
+            <p>Este site é uma atividade atribuída pelo instrutor Vilson Moro, <br />
+            para o curso de Java do Entra21 edição 2023.
             </p>
-            <ul class="actions">
-                <li>
-                    <a href="#exercicio2" class="button scrolly"> == $0
-                        "Learn more"
-                        ::after
-                    </a> 
-                </li>
-            </ul>
-            </div>
         </section>
-        <section id="exercício2" class="wrapper style2 spotlights inactive">
-            <a href="#" class="image">
-                
-            </a>
-        </section>
-    </div>
+    </main>
 
+    <script>
+        const toggleBtn = document.querySelector('.toggle_btn')
+        const toggleBtnIcon = document.querySelector('.toggle_btn i')
+        const dropdow_menu = document.querySelector('.dropdown_menu')
 
-   <footer>
-    <div>
-        <ul>
-            <li><!--criado por:--></li>
-            <li><!--design--></li>
-            <li><!--contato--></li>
-        </ul>
-    </div>
-   </footer>
+        toggleBtn.onclick = function (){
+            dropdow_menu.classList.toggle('open')
+            const isOpen = dropdow_menu.classList.contains('open')
+    
+            toggleBtnIcon.classList = isOpen
+            ? 'fa-solid fa-xmark'
+            : 'fa-solid fa-bars'
+        }
+    </script>
+</body>
 </html>

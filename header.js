@@ -9,7 +9,7 @@ const header =
                 <li><a href="exercicio4.html">IMC</a></li>
                 <li><a href="exercicio5.html">Aumento</a></li>
             </ul>
-            <a href="#" class="action_btn">Get Started</a>
+            <a href="exercicio2.html" class="action_btn">Get Started</a>
             <div class="toggle_btn">
                 <i class="fa-solid fa-bars"></i>
             </div>

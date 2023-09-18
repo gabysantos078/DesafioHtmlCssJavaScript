@@ -127,6 +127,25 @@ section#hero{
     margin-bottom: 1rem;
 }
 
+label{
+    color: white;
+    text-align: justify;
+    font-size: larger;
+}
+input{
+    border-radius: 5px;
+}
+button{
+    border-radius: 5px;
+    width: 110px;
+    background-color: blueviolet;
+    color: white;
+}
+p{
+    color: white;
+}
+
+
 @media (max-width: 992px) {
     .navbar .links,
     .navbar .action_btn {
